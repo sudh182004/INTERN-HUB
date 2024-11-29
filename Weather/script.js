@@ -125,7 +125,7 @@ const forecastDetails = document.getElementById('forecastDetails');
 
 // Fetch forecast data
 function fetchWeatherForecast(city) {
-  const apiKey = process.env.API_KEY;
+  const apiKey = API_KEYs;
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
   fetch(url)
