@@ -1,4 +1,4 @@
-import API_KEYs from '../../ignore/apikey.js';
+import API_KEYs from './ignore/apikey.js';
 document.addEventListener("DOMContentLoaded", () => {
   const API_KEY = API_KEYs; 
   const defaultCity = "Ghaziabad"; 
