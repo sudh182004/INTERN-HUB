@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_KEY = 18f723e11f065066628a92e4c28a0de7; 
+  const API_KEY = "18f723e11f065066628a92e4c28a0de7"; 
   const defaultCity = "Ghaziabad"; 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${API_KEY}&units=metric`;
 
@@ -123,7 +123,7 @@ const forecastModal = document.getElementById('forecastModal');
 
 // Fetch forecast data
 function fetchWeatherForecast(city) {
-  const apiKey = 18f723e11f065066628a92e4c28a0de7;
+  const apiKey = "18f723e11f065066628a92e4c28a0de7";
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
   // Fetch the weather data
