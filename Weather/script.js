@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const defaultCity = "Ghaziabad"; 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${defaultCity}&appid=${API_KEY}&units=metric`;
 
-  // Fetch weather data for default city on page load
+  // Fetch weather data for default city on pages load
   fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
