@@ -1,0 +1,645 @@
+.nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .nav-item {
+    flex: 1;
+    text-align: center;
+  }
+  .add-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f4715c;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  .add-button:hover {
+    background-color: #e05b4e;
+  }
+  .align-items-center {
+    align-items: center !important;
+    justify-content: center;
+    position: fixed;
+    bottom: 0.1rem;
+}
+.input_amount{
+  border-color: black;
+  /* background-color: antiquewhite; */
+  background: cornsilk;
+}
+.transaction-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.text-muted {
+  font-size: 0.9rem;
+}
+
+.amount {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.amount.negative {
+  color: red;
+}
+
+.visa-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 370px; /* Increased width */
+  height: 210px; /* Increased height */
+  background-image: radial-gradient(circle 897px at 9% 80.3%, #373b3e 0%, rgb(237 224 255 / 90%) 100.2%);
+  border-radius: 20px; /* Rounder corners */
+  padding: 30px; /* Increased padding for better spacing */
+  font-family: 'Arial', Helvetica, sans-serif;
+  position: relative;
+  gap: 9px; /* Increased gap between elements */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* More subtle and softer box shadow */
+  overflow: hidden; /* Ensures that child elements don't overflow the rounded corners */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.visa-card:hover {
+  transform: scale(1.05); /* Smooth scaling on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.visa-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent dark overlay */
+  border-radius: 20px; /* Ensure overlay fits the rounded corners */
+  pointer-events: none; /* Prevent overlay from interfering with interaction */
+  transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect for the overlay */
+}
+
+.visa-card:hover::before {
+  opacity: 0.1; /* Subtle increase in opacity on hover */
+}
+
+/* Improve font styles */
+.visa-card h2, .visa-card p {
+  color: white; /* White text for better contrast */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.visa-card h2 {
+  font-size: 24px; /* Larger font size for headings */
+  margin-bottom: 10px; /* Adjust spacing for headings */
+}
+
+.visa-card p {
+  font-size: 16px; /* Adjust paragraph font size */
+}
+
+/* Optionally, you can add icons inside the card */
+.visa-card .icon {
+  font-size: 40px;
+  color: white;
+  margin-bottom: 15px; /* Add margin for space */
+}
+
+/* body {
+  background: rgb(248, 243, 250);
+  color: #000;
+} */
+
+/* Visa Card Hover Effect */
+.visa-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.visa-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Transaction Card Hover Effect */
+.transaction-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 22px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.transaction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.inputstyle::placeholder {
+  color: #ffffff;
+  font-weight: bold; /* Made placeholder text bold */
+}
+
+.inputstyle {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  caret-color: red;
+  font-size: 14px; /* Increased font size */
+  height: 30px; /* Increased height */
+  letter-spacing: 2px; /* Added more spacing between letters */
+}
+
+.number-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+#cardNumber {
+  width: 100%;
+  height: 40px; /* Increased height */
+  font-size: 18px; /* Larger font size for card number */
+  padding-left: 2px; /* Added padding to make text more comfortable */
+}
+
+.Balance {
+  font-size: 18px; /* Increased font size */
+  color: white;
+  font-weight: bold; /* Made balance bold */
+}
+
+.name-date-cvv-container {
+  width: 100%;
+  height: 40px; /* Increased height for spacing */
+  display: flex;
+  gap: 15px; /* Increased gap */
+}
+
+.name-wrapper {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.expiry-wrapper,
+.cvv-wrapper {
+  width: 30%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.cvv-wrapper {
+  width: 10%;
+}
+
+#expiry,
+#cvv {
+  width: 100%;
+  height: 40px; /* Increased height */
+  font-size: 18px; /* Larger font size */
+  padding-left: 10px; /* Added padding */
+}
+
+.input-label {
+  font-size: 14px; /* Slightly larger label font */
+  letter-spacing: 1.5px;
+  color: #e2e2e2;
+  width: 100%;
+}
+
+.input-with-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.inputstyle {
+  padding-right: 30px; /* Increased space for the icon */
+}
+
+.input-with-icon svg {
+  position: absolute;
+  right: 15px; /* Adjusted to align properly */
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px; /* Made icon bigger */
+}
+
+/* Add some extra spacing and padding to make the card look more spacious and refined */
+
+/* .add-button {
+  position: fixed;
+  top: 88vh;
+  margin-left: 20rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f4715c;
+  color: white;
+  font-size: 24px;
+  transform: translateX(-50%);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+} */
+.add-button {
+  position: fixed;
+  top: 88vh;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f4715c;
+  color: white;
+  font-size: 24px;
+  transform: translateX(-50%);
+  margin-left: 40rem;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjustments for tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .add-button {
+    margin-left: 18rem;
+  }
+}
+
+/* Adjustments for phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .add-button {
+    margin-left: 12rem;
+  }
+}
+
+/* Extra small screens (max-width: 375px) */
+@media (max-width: 375px) {
+  .add-button {
+    margin-left: 8rem;
+  }
+}
+
+
+.add-button:hover {
+  background-color: #e05b4e;
+}
+.transaction-card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+.transaction-details {
+  flex: 1;
+}
+.amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.amount.negative {
+  color: red;
+}
+#delete_i {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+
+/* loder */
+/* From Uiverse.io by Nawsome */ 
+.pl {
+  width: 6em;
+  height: 6em;
+}
+
+.pl__ring {
+  animation: ringA 2s linear infinite;
+}
+
+.pl__ring--a {
+  stroke: #f42f25;
+}
+
+.pl__ring--b {
+  animation-name: ringB;
+  stroke: #f49725;
+}
+
+.pl__ring--c {
+  animation-name: ringC;
+  stroke: #255ff4;
+}
+
+.pl__ring--d {
+  animation-name: ringD;
+  stroke: #f42582;
+}
+
+/* Animations */
+@keyframes ringA {
+  from, 4% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+
+  12% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -335;
+  }
+
+  32% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -595;
+  }
+
+  40%, 54% {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -660;
+  }
+
+  62% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -665;
+  }
+
+  82% {
+    stroke-dasharray: 60 600;
+    stroke-width: 30;
+    stroke-dashoffset: -925;
+  }
+
+  90%, to {
+    stroke-dasharray: 0 660;
+    stroke-width: 20;
+    stroke-dashoffset: -990;
+  }
+}
+
+@keyframes ringB {
+  from, 12% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -110;
+  }
+
+  20% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -115;
+  }
+
+  40% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -195;
+  }
+
+  48%, 62% {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  70% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  90% {
+    stroke-dasharray: 20 200;
+    stroke-width: 30;
+    stroke-dashoffset: -305;
+  }
+
+  98%, to {
+    stroke-dasharray: 0 220;
+    stroke-width: 20;
+    stroke-dashoffset: -330;
+  }
+}
+
+@keyframes ringC {
+  from {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  8% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  28% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  36%, 58% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  66% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  86% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  94%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+
+@keyframes ringD {
+  from, 8% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: 0;
+  }
+
+  16% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -5;
+  }
+
+  36% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -175;
+  }
+
+  44%, 50% {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -220;
+  }
+
+  58% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -225;
+  }
+
+  78% {
+    stroke-dasharray: 40 400;
+    stroke-width: 30;
+    stroke-dashoffset: -395;
+  }
+
+  86%, to {
+    stroke-dasharray: 0 440;
+    stroke-width: 20;
+    stroke-dashoffset: -440;
+  }
+}
+/* Make the modal more modern */
+.modal-content {
+  border-radius: 15px;
+  background-color: #f8f9fa;
+}
+
+.modal-header {
+  border-bottom: 2px solid #ddd;
+  padding: 20px 25px;
+  
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  
+}
+
+.modal-body {
+  padding: 20px 30px;
+}
+
+.form-control {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.form-select {
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Optional - Adding hover effects */
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-secondary:hover {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+
+/* Add shadow to the modal */
+.modal-dialog-centered {
+  transform: translate(0, -50%);
+}
+
+.card_d{
+  justify-content: center;
+  align-items: center;
+  display: flex
+}
+/* Optional: Make the chart fit well in the modal */
+#myChart {
+  width: 100% !important;
+  height: 100%;
+}
+
+
+
